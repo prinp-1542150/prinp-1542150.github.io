@@ -30,9 +30,21 @@ li{
     border: solid 8px black;
     text-align: center;
     background-color: #8E41D5;
-
-
+    animation-name: headermove;
+    animation-duration: 4s;
+    animation-delay: 2s;
 }
+
+    @keyframes headermove {
+        0%   {background-color:purple; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:purple; left:200px; top:200px;}
+        75%  {background-color:yellow; left:0px; top:200px;}
+        100% {background-color:purple; left:0px; top:0px;}
+    }
+
+
+
 #Header h1{
     font-size: 60px;
     font-family: "Passion One";
@@ -56,12 +68,15 @@ li{
 #LeftNav img{
     opacity: 1;
     filter: alpha(opacity=100);
+    transform: rotate(20deg); /* Standard syntax */
+   
 
 }
 #LeftNav img:hover{
     opacity:0.5;
     filter: alpha(opacity=50);
 }
+
 
 #LeftNav ul{
     padding-bottom: 8px;
@@ -81,7 +96,12 @@ li{
     text-align: center;
     padding: 15px;
     background-color: #8E41D5;
+    transition: width 50s;
 
+
+}
+#Content:hover{
+    width: 300px;
 }
 
 #Footer{
@@ -92,7 +112,12 @@ li{
     border: solid 8px black;
     text-align: center;
     background-color: #8E41D5;
+    transition: width 2s, height 4s;
 
+}
+#Footer:hover{
+    width: 300px;
+    height: 300px;
 }
 ul{
     list-style-type: none;
